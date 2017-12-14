@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteBase /htdocs/
+RewriteRule ^(.*)$ wainssolutions.com [NC,L]

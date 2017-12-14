@@ -1,0 +1,20 @@
+<?php
+$url=isset($_GET['url'])? $_GET['url'] : header("Location: index.php?url=dashboard");
+$valid_urls=array('dashboard','wholesale');
+
+if(!in_array($url,$valid_urls)){
+
+	$url='404';
+}
+switch ($url) {
+	case 'dashboard':
+		include 'dashboard.php';
+		break;
+	case 'wholesale':
+		include 'wholesale.php';
+		break;
+	default:
+		echo "bad habbit to break rules";
+		break;
+}
+?>
